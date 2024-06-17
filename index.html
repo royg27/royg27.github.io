@@ -3,187 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roy Ganz Home Page</title>
+  <title>Roy Ganz | Home Page</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
     }
 
     header {
-      background-color: #C2DEDC;
-      color: #000;
-      padding: 20px;
+      background-color: #A8D5BA;
+      color: #333;
+      padding: 40px 20px;
       text-align: center;
+    }
+
+    header img {
+      border-radius: 50%;
+      margin: 20px 0;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 4px solid #fff;
     }
 
     h1 {
       margin: 0;
-      font-size: 30px;
+      font-size: 42px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     main {
-      padding: 20px;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
 
     section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
-    .subsection {
-      margin-bottom: 20px;
-    }
-
-    .subsection h2 {
-      font-size: 24px;
-    }
-
-    .subsection p {
-      margin-top: 10px;
+    h2 {
+      font-size: 32px;
+      color: #98B4AA;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
     }
 
     .publication {
       margin-bottom: 20px;
       padding-bottom: 20px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #eee;
     }
 
-    .publication h2 {
+    .publication h3 {
       font-size: 24px;
+      margin: 0 0 10px;
     }
 
     .publication p {
-      margin-top: 10px;
+      margin: 5px 0;
     }
 
-    img {
-      max-width: 15%;
-      margin-left: auto;
-      margin-right: auto;
-      height: auto;
+    .publication a {
+      color: #98B4AA;
+      text-decoration: none;
+    }
+
+    .publication a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      background-color: #333;
+      background-color: #98B4AA;
       color: #fff;
       padding: 20px;
       text-align: center;
-    }
-    a:link {
-      color: black;
-      background-color: transparent;
-      text-decoration: underline;
+      margin-top: 40px;
     }
 
-    a:visited {
-      color: black;
-      background-color: transparent;
-      text-decoration: underline;
+    .social-links img {
+      width: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+      transition: transform 0.2s;
     }
 
-    a:hover {
-      color: black;
-      background-color: transparent;
-      text-decoration: underline;
+    .social-links img:hover {
+      transform: scale(1.1);
     }
 
-    a:active {
-      color: black;
-      background-color: transparent;
-      text-decoration: underline;
+    .social-links a {
+      color: #fff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Roy Ganz</h1>
-    <p></p>
-    <img src="https://avatars.githubusercontent.com/u/49342581?s=400&u=a9c881d75976196ec1fa1c6bfbbe3ec2b41147b7&v=4" alt="Publication 3">
-    <p></p>
-    <a href="https://twitter.com/roy_ganz">Twitter</a> |
-    <a href="https://scholar.google.com/citations?user=2E0FHMoAAAAJ&hl=en&oi=ao">Google Scholar</a> |
-    <a href="https://www.semanticscholar.org/author/Roy-Ganz/2061747201">Semantic Scholar</a> |
-    <a href="https://github.com/royg27">GitHub</a>
+    <img src="https://avatars.githubusercontent.com/u/49342581?s=400&u=a9c881d75976196ec1fa1c6bfbbe3ec2b41147b7&v=4" alt="Roy Ganz">
+    <nav>
+      <a href="https://twitter.com/roy_ganz">Twitter</a> |
+      <a href="https://scholar.google.com/citations?user=2E0FHMoAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+      <a href="https://github.com/royg27">GitHub</a>
+    </nav>
   </header>
 
   <main>
-    <section class="subsection">
+    <section class="about">
       <h2>About Me</h2>
-      <p>I am a Ph.D. Electrical Engineer student at Technion, researching Deep Learning and Computer Vision under the supervision of <a href="https://elad.cs.technion.ac.il/">Prof. Michael Elad</a>. I am interested in adversarial attacks and robustness and in generative models. I am also a computer vision research intern at Amazon.
-      </p>
-      <p>
-      Prior my Ph.D. studies, I obtained my B.Sc. in EE from the Technion (cum laude) and worked as a chip design intern at Apple.</p>
+      <p>I am a Ph.D. Electrical Engineer student at Technion, researching Deep Learning and Computer Vision under the supervision of <a href="https://elad.cs.technion.ac.il/">Prof. Michael Elad</a>. My interests include adversarial attacks, robustness, and generative models. I am also a computer vision research intern at Amazon.</p>
+      <p>Prior to my Ph.D. studies, I obtained my B.Sc. in Electrical Engineering from the Technion (cum laude) and worked as a chip design intern at Apple.</p>
     </section>
 
     <section class="publications">
       <h2>Publications</h2>
+
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2306.16805'>CLIPAG: Towards Generator-Free Text-to-Image Generation</a></h3>
-        <p><strong>Roy Ganz</strong>,  Michael Elad</p>
-        <p>WACV 2024, in IEEE/CVF Winter Conference on Applications of Computer Vision.</p>
+        <h3><a href="https://arxiv.org/abs/2303.15409">Paint by Inpaint: Learning to Add Image Objects by Removing Them First</a></h3>
+        <p>Navve Wasserman, Noam Rotstein, <strong>Roy Ganz</strong>, Ron Kimmel</p>
+        <p>Preprint, arXiv:2404.18212.</p>
+        <a href="https://github.com/RotsteinNoam/Paint-by-Inpaint">[Code]</a>
       </div>
 
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2305.17718'>FuseCap: Leveraging Large Language Models to Fuse Visual Data into Enriched Image Captions</a></h3>
+        <h3><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Ganz_Question_Aware_Vision_Transformer_for_Multimodal_Reasoning_CVPR_2024_paper.html">Question aware vision transformer for multimodal reasoning</a></h3>
+        <p><strong>Roy Ganz</strong>, Yair Kittenplon, Aviad Aberdam, Elad Ben Avraham, Oren Nuriel, Shai Mazor, Ron Litman</p>
+        <p>CVPR 2024 <span style="color: red">SPOTLIGHT</span>, in IEEE/CVF Conference on Computer Vision and Pattern Recognition.</p>
+        <a href="https://github.com/amazon-science/QA-ViT">[Code]</a>
+      </div>
+      
+      <div class="publication">
+        <h3><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Blau_GRAM_Global_Reasoning_for_Multi-Page_VQA_CVPR_2024_paper.html">GRAM: Global Reasoning for Multi-Page VQA</a></h3>
+        <p>Tsachi Blau, Sharon Fogel, Roi Ronen, Alona Golts, <strong>Roy Ganz</strong>, Elad Ben Avraham, Aviad Aberdam, Shahar Tsiper, Ron Litman</p>
+        <p>CVPR 2024, in IEEE/CVF Conference on Computer Vision and Pattern Recognition.</p>
+      </div>
+      
+      <div class="publication">
+        <h3><a href="https://arxiv.org/abs/2306.16805">CLIPAG: Towards Generator-Free Text-to-Image Generation</a></h3>
+        <p><strong>Roy Ganz</strong>, Michael Elad</p>
+        <p>WACV 2024, in IEEE/CVF Winter Conference on Applications of Computer Vision.</p>
+        <a href="https://github.com/royg27/CLIPAG">[Code]</a>
+      </div>
+      
+      <div class="publication">
+        <h3><a href="https://arxiv.org/abs/2305.17718">FuseCap: Leveraging Large Language Models to Fuse Visual Data into Enriched Image Captions</a></h3>
         <p>Noam Rotstein, David Bensaid, Shaked Brody, <strong>Roy Ganz</strong>, Ron Kimmel</p>
-        <p>Preprint, arXiv:2305.17718.</p>
+        <p>WACV 2024, in IEEE/CVF Winter Conference on Applications of Computer Vision.</p>
         <a href="https://github.com/RotsteinNoam/FuseCap">[Code]</a>
       </div>
       
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2207.11378'>Do Perceptually Aligned Gradients Imply Adversarial Robustness?</a></h3>
+        <h3><a href="https://arxiv.org/abs/2207.11378">Do Perceptually Aligned Gradients Imply Adversarial Robustness?</a></h3>
         <p><strong>Roy Ganz</strong>, Bahjat Kawar, Michael Elad</p>
-        <p>ICML 2023 <span style="color: red">oral presentation</span>, in International Conference on Machine Learning.</p>
+        <p>ICML 2023 <span style="color: red">ORAL PRESENTATION</span>, in International Conference on Machine Learning.</p>
         <a href="https://github.com/royg27/PAG-ROB">[Code]</a>
       </div>
-
+      
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2301.07389'>Towards Models that Can See and Read</a></h3>
+        <h3><a href="https://arxiv.org/abs/2301.07389">Towards Models that Can See and Read</a></h3>
         <p><strong>Roy Ganz</strong>, Oren Nuriel, Aviad Aberdam, Yair Kittenplon, Shai Mazor, Ron Litman</p>
         <p>ICCV 2023, in International Conference on Computer Vision.</p>
       </div>
-
+      
+      
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2301.07464'>CLIPTER: Looking at the Bigger Picture in Scene Text Recognition</a></h3>
+        <h3><a href="https://arxiv.org/abs/2301.07464">CLIPTER: Looking at the Bigger Picture in Scene Text Recognition</a></h3>
         <p>Aviad Aberdam, David Bensaïd, Alona Golts, <strong>Roy Ganz</strong>, Oren Nuriel, Royee Tichauer, Shai Mazor, Ron Litman</p>
         <p>ICCV 2023, in International Conference on Computer Vision.</p>
       </div>
-
+      
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2303.15409'>Classifier Robustness Enhancement Via Test-Time Transformation</a></h3>
+        <h3><a href="https://arxiv.org/abs/2303.15409">Classifier Robustness Enhancement Via Test-Time Transformation</a></h3>
         <p>Tsachi Blau, <strong>Roy Ganz</strong>, Chaim Baskin, Michael Elad, Alex Bronstein</p>
         <p>Preprint, arXiv:2303.15409.</p>
       </div>
+      
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2208.08664'>Enhancing diffusion-based image synthesis with robust classifier guidance</a></h3>
+        <h3><a href="https://arxiv.org/abs/2208.08664">Enhancing diffusion-based image synthesis with robust classifier guidance</a></h3>
         <p>Bahjat Kawar, <strong>Roy Ganz</strong>, Michael Elad</p>
         <p>TMLR 2023, in Transactions on Machine Learning Research.</p>
         <a href="https://github.com/bahjat-kawar/enhancing-diffusion-robust">[Code]</a>
       </div>
-
+      
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2108.03702'>BIGRoC: Boosting Image Generation via a Robust Classifier</a></h3>
+        <h3><a href="https://arxiv.org/abs/2108.03702">BIGRoC: Boosting Image Generation via a Robust Classifier</a></h3>
         <p><strong>Roy Ganz</strong>, Michael Elad</p>
         <p>TMLR 2023, in Transactions on Machine Learning Research.</p>
         <a href="https://github.com/royg27/BIGRoC">[Code]</a>
       </div>
-
+      
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2207.08089'>Threat model-agnostic adversarial defense using diffusion models</a></h3>
+        <h3><a href="https://arxiv.org/abs/2207.08089">Threat model-agnostic adversarial defense using diffusion models</a></h3>
         <p>Tsachi Blau, <strong>Roy Ganz</strong>, Bahjat Kawar, Alex Bronstein, Michael Elad</p>
         <p>Preprint, arXiv:2207.08089.</p>
       </div>
-
+      
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2205.03873'>Multimodal semi-supervised learning for text recognition</a></h3>
+        <h3><a href="https://arxiv.org/abs/2205.03873">Multimodal semi-supervised learning for text recognition</a></h3>
         <p>Aviad Aberdam, <strong>Roy Ganz</strong>, Shai Mazor, Ron Litman</p>
         <p>Preprint, arXiv:2205.03873.</p>
       </div>
-
+      
       <div class="publication">
-        <h3><a href='https://arxiv.org/abs/2104.00464'>Improved Image Generation via Sparse Modeling</a></h3>
+        <h3><a href="https://arxiv.org/abs/2104.00464">Improved Image Generation via Sparse Modeling</a></h3>
         <p><strong>Roy Ganz</strong>, Michael Elad</p>
         <p>ICLR Workshop on Deep Generative Models for Highly Structured Data.</p>
       </div>
     </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://twitter.com/roy_ganz"><img src="https://image.flaticon.com/icons/png/512/733/733579.png" alt="Twitter"></a>
+      <a href="https://scholar.google.com/citations?user=2E0FHMoAAAAJ&hl=en&oi=ao"><img src="chrome://favicon2/?size=24&scaleFactor=1x&showFallbackMonogram=&pageUrl=https%3A%2F%2Fscholar.google.com%2F" alt="Google Scholar"></a>
+      <a href="https://github.com/royg27"><img src="https://image.flaticon.com/icons/png/512/733/733553.png" alt="GitHub"></a>
+    </div>
+    <p>&copy; 2024 Roy Ganz. All rights reserved.</p>
+  </footer>
+</body>
+</html>
