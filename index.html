@@ -16,8 +16,9 @@
     header {
       background-color: #A8D5BA;
       color: #333;
-      padding: 40px 20px;
+      padding: 20px;
       text-align: center;
+      position: relative;
     }
 
     header img {
@@ -34,19 +35,28 @@
       font-size: 42px;
     }
 
-    nav {
-      margin-top: 10px;
+    .navbar {
+      overflow: hidden;
+      background-color: #98B4AA;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    nav a {
-      color: #333;
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
       text-decoration: none;
-      margin: 0 15px;
-      font-size: 18px;
+      font-size: 17px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
     }
 
     main {
@@ -101,20 +111,36 @@
       margin-top: 40px;
     }
 
-    .social-links img {
-      width: 30px;
-      margin: 0 10px;
-      vertical-align: middle;
-      transition: transform 0.2s;
-    }
-
-    .social-links img:hover {
-      transform: scale(1.1);
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .social-links a {
-      color: #fff;
+      display: flex;
+      align-items: center;
+      color: #333;
       text-decoration: none;
+      margin: 10px;
+      font-size: 18px;
+    }
+
+    .social-links img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .social-links a:hover {
+      color: #555;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -122,21 +148,36 @@
   <header>
     <h1>Roy Ganz</h1>
     <img src="https://avatars.githubusercontent.com/u/49342581?s=400&u=a9c881d75976196ec1fa1c6bfbbe3ec2b41147b7&v=4" alt="Roy Ganz">
-    <nav>
-      <a href="https://twitter.com/roy_ganz">Twitter</a> |
-      <a href="https://scholar.google.com/citations?user=2E0FHMoAAAAJ&hl=en&oi=ao">Google Scholar</a> |
-      <a href="https://github.com/royg27">GitHub</a>
-    </nav>
+    <div class="social-links">
+      <a href="https://twitter.com/roy_ganz">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEbS_Ekc9VBm2IuPqyre_PTWvGnNvuMmd-wVNN3_GjLAcXxCHULaG-tFfbGrs7d28QEag&usqp=CAU" alt="Twitter">
+        Twitter
+      </a>
+      <a href="https://scholar.google.com/citations?user=2E0FHMoAAAAJ&hl=en&oi=ao">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/2048px-Google_Scholar_logo.svg.png" alt="Google Scholar">
+        Google Scholar
+      </a>
+      <a href="https://github.com/royg27">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+        GitHub
+      </a>
+    </div>
   </header>
 
+  <div class="navbar">
+    <a href="#about">Bio</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </div>
+
   <main>
-    <section class="about">
+    <section id="about" class="about">
       <h2>About Me</h2>
       <p>I am a Ph.D. Electrical Engineer student at Technion, researching Deep Learning and Computer Vision under the supervision of <a href="https://elad.cs.technion.ac.il/">Prof. Michael Elad</a>. My interests include adversarial attacks, robustness, and generative models. I am also a computer vision research intern at Amazon.</p>
       <p>Prior to my Ph.D. studies, I obtained my B.Sc. in Electrical Engineering from the Technion (cum laude) and worked as a chip design intern at Apple.</p>
     </section>
 
-    <section class="publications">
+    <section id="publications" class="publications">
       <h2>Publications</h2>
 
       <div class="publication">
@@ -186,7 +227,6 @@
         <p>ICCV 2023, in International Conference on Computer Vision.</p>
       </div>
       
-      
       <div class="publication">
         <h3><a href="https://arxiv.org/abs/2301.07464">CLIPTER: Looking at the Bigger Picture in Scene Text Recognition</a></h3>
         <p>Aviad Aberdam, David Bensaïd, Alona Golts, <strong>Roy Ganz</strong>, Oren Nuriel, Royee Tichauer, Shai Mazor, Ron Litman</p>
@@ -231,14 +271,25 @@
         <p>ICLR Workshop on Deep Generative Models for Highly Structured Data.</p>
       </div>
     </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out to me through the following platforms:</p>
+      <div class="social-links">
+        <a href="https://twitter.com/roy_ganz">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEbS_Ekc9VBm2IuPqyre_PTWvGnNvuMmd-wVNN3_GjLAcXxCHULaG-tFfbGrs7d28QEag&usqp=CAU" alt="Twitter">
+          Twitter
+        </a>
+        <a href="mailto:royg27592@gmail.com">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/800px-Gmail_icon_%282020%29.svg.png" alt="Gmail">
+          Gmail
+        </a>
+
+      </div>
+    </section>
   </main>
 
   <footer>
-    <div class="social-links">
-      <a href="https://twitter.com/roy_ganz"><img src="https://image.flaticon.com/icons/png/512/733/733579.png" alt="Twitter"></a>
-      <a href="https://scholar.google.com/citations?user=2E0FHMoAAAAJ&hl=en&oi=ao"><img src="chrome://favicon2/?size=24&scaleFactor=1x&showFallbackMonogram=&pageUrl=https%3A%2F%2Fscholar.google.com%2F" alt="Google Scholar"></a>
-      <a href="https://github.com/royg27"><img src="https://image.flaticon.com/icons/png/512/733/733553.png" alt="GitHub"></a>
-    </div>
     <p>&copy; 2024 Roy Ganz. All rights reserved.</p>
   </footer>
 </body>
